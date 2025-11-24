@@ -1,0 +1,55 @@
+HashMap<Integer,String> m = new HashMap<>(Map.of(1,"a", 2,"b", 3,"c", 4,"d"));
+(devam eden 3 soruyu yukarıdaki koda göre cevaplayınız)
+
+1. Yukarıda tanımlı Map için  System.out.println(m.get(3));  çıktısı ne olur?
+a) b    b) d    c) çıktı olmaz    d) c
+
+2. Yukarıda tanımlı Map için  System.out.println(m.get(0));  çıktısı ne olur?
+a) 1    b) a    c) null        d) taşma hatası
+
+3. Yukarıda tanımlı Map için System.out.println(m.containsKey(2)); çıktısı ne olur?
+a)true    b) false    c) null    d) b
+
+
+
+HashSet<Integer> A = new HashSet<>(Arrays.asList(0,2,3,5,8));
+HashSet<Integer> B = new HashSet<>(Arrays.asList(1,2,4,5,7));
+(devam eden 3 soruyu yukarıdaki koda göre cevaplayınız)
+
+4. Yukarıda tanımlı A ve B kümeleri için aşağıdaki kod çalıştığında çıktı ne olur?
+A.addAll(B);
+System.out.println(A);
+a) 0, 1, 2, 3, 4, 5, 7, 8             b) 0, 1, 2, 2, 3, 4, 5, 5, 7, 8
+c) 2, 5                                     d) 0, 1, 3, 4, 7, 8
+
+5. Yukarıda tanımlı A ve B kümeleri için aşağıdaki kod çalıştığında çıktı ne olur?
+A.retainAll(B);
+System.out.println(A);
+a) 0, 1, 2, 3, 4, 5, 7, 8                     b) 0, 1, 2, 2, 3, 4, 5, 5, 7, 8
+c) 2, 5                                             d) 0, 1, 3, 4, 7, 8
+
+6. Yukarıda tanımlı A ve B kümeleri için aşağıdaki kod çalıştığında çıktı ne olur?
+A.removeAll(B);
+System.out.println(A);
+a) 0, 1, 2, 3, 4, 5, 7, 8                    b) 1, 4, 7
+c) 2, 5                                             d) 0, 3, 8
+
+
+List<Integer> z = Arrays.asList(1,0,3,2,5,6,9,7,0);
+(devam eden 4 soruyu yukarıda tanımlı z listesine göre cevaplayınız)
+
+7. Yukarıda tanımlı z listesine göre aşağıdaki kod çalıştığında çıktı ne olur?
+List<Integer> a = z.stream(). map(p-> p%3==2?p+1:p).collect(Collectors.toList());
+System.out.println(a);
+a) [2,1,4,2,5,7,10,8,1]          b) [1,0,3,3,6,6,9,7,0]        c) [2,5]        d) [2,5,7]
+8. Yukarıda tanımlı z listesine göre aşağıdaki kod çalıştığında çıktı ne olur?
+List<Integer> b = z.stream().filter(p->(p%5<4 && p>5)).collect(Collectors.toList());
+System.out.println(b);
+a) [1,0,3,2]    b) [9]    c) [6,7]    d) [5,6,7]
+9. Yukarıda tanımlı z listesine göre aşağıdaki kod çalıştığında çıktı ne olur?
+Optional<Integer> c = z.stream().reduce((p1, p2)->p1%5==0?p1:p2);
+System.out.println(c.get());
+a) 5    b) 1    c) 6    d) 0
+10. Yukarıda tanımlı z listesi için aşağıdakilerden hangisi [0,2,5,7,0] dizisini filtreler?
+a) filter(p->p%5==2 &&  p%5==0)             b) filter(p->p%5==2 || p%5==0)    
+c) filter(p->p==2 || p%7==0)                       d) Hiçbiri
